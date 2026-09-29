@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EduGenie - AI Learning Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>EduGenie</h1>
+      <p>Google Gemini Powered Learning Assistant</p>
+    </div>
+    <span class="badge">Generative AI</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Learn smarter with AI</h2>
+      <p>Ask a question, request an explanation, or generate a practice quiz.</p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h3>Ask EduGenie</h3>
+        <textarea id="question" placeholder="Example: Explain Python inheritance with a simple example."></textarea>
+        <button id="askBtn">Ask EduGenie</button>
+        <div id="answer" class="output">Your answer will appear here.</div>
+      </div>
+
+      <div class="card">
+        <h3>Generate Quiz</h3>
+        <input id="topic" placeholder="Enter topic, e.g. Python loops">
+        <select id="count">
+          <option value="5">5 questions</option>
+          <option value="10">10 questions</option>
+        </select>
+        <button id="quizBtn">Generate Quiz</button>
+        <div id="quizOutput" class="output">Your quiz will appear here.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>EduGenie Project • Built with Flask + Google Gemini</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
